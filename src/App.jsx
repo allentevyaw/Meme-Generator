@@ -5,7 +5,6 @@ import { Meme } from './Components/Meme'
 
 function App() {
   const [count, setCount] = useState(0)
-  console.log(count + "BALLS")
 
   return (
     <div className="App">
