@@ -41,6 +41,7 @@ export const Meme = () => {
                 />
                <button onClick={buttonClick} className="form--button">Generate a new meme!</button>
             </div>
+            <br />
             <img src={meme.randomImage} className="meme--image"/>
         </main>
     )
