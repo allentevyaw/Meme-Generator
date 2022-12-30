@@ -25,6 +25,13 @@ export const Meme = () => {
 
 } 
 
+    function onChange(event){
+        const {name, value} = event.target
+        setMeme(prevArray => ({
+            ...prevArray,
+            [name] : value
+        }))
+    }
 
     return (
         <main>
@@ -33,16 +40,22 @@ export const Meme = () => {
                     type="text"
                     placeholder="Top text"
                     className="form--input"
+                    name="topText"
+                    value={meme.topText}
                 />
                 <input 
                     type="text"
                     placeholder="Bottom Text"
                     className="form--input"
+                    name="bottomText"
+                    value={meme.bottomText}
                 />
                <button onClick={buttonClick} className="form--button">Generate a new meme!</button>
             </div>
             <br />
             <img src={meme.randomImage} className="meme--image"/>
+            <h2 className="meme--text top">{meme.topText}</h2>
+            <h2 className="meme--text bottom">{meme.bottomText}</h2>
         </main>
     )
 }
