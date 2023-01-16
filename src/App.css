@@ -101,3 +101,8 @@ main {
     top: 0;
 }
 
+.meme--final {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
